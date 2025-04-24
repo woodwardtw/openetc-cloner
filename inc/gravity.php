@@ -8,7 +8,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$form_id = RGFormsModel::get_form_id('duplicate site');//get site id by name - can replace with options setup
+$form_id = RGFormsModel::get_form_id('duplicate site');//get form id that matches "duplicate site" - can replace with options setup that is currently commented out in inc/acf.php but it'll take a bit of work in the javascript to fix the IDs
 
 
 add_action( 'gform_after_submission_' . $form_id, 'gform_site_cloner', 10, 2 );//specific to the gravity form id

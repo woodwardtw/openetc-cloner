@@ -44,6 +44,8 @@ foreach ( $ca_cloner_includes as $file ) {
 }
 
 
+
+
 //GET URL OF CLONE SITE
 function acf_fetch_site_url(){
   global $post;
@@ -84,12 +86,6 @@ add_filter( 'the_content', 'build_site_clone_button' );
 
 //builds clone button link
 function clone_button_maker(){
-    global $post;
-    $form_id = RGFormsModel::get_form_id('duplicate site');
-    $site_id = get_field('site_id',$post->ID);    
-    $clone_page = get_field('cloner_page', 'option');
-    $clone_page_slug = $clone_page->post_name;
-    $site_url = get_site_url();
     return "<button id='modal-button' class='dup-button'>Clone the site</button>";
 }
 
