@@ -1,0 +1,48 @@
+{
+    "key": "group_5fca9c8ec05fd",
+    "title": "Clone Fields",
+    "fields": [
+        {
+            "key": "field_5fca9c9572d5c",
+            "label": "Site ID",
+            "name": "site_id",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Put the site ID of the site you want to copy here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 1,
+            "placeholder": "Put the ID here in numerical form.",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "clone"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1745505869
+}
