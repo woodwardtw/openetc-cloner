@@ -14,10 +14,7 @@ Text Domain: open-etc-cloner
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-
 add_action('wp_enqueue_scripts', 'opened_duplicator_scripts');
-
-
 
 function opened_duplicator_scripts() {                           
     $deps = array('jquery');
@@ -27,11 +24,10 @@ function opened_duplicator_scripts() {
     wp_enqueue_style( 'ca-cloner-main-css', plugin_dir_url( __FILE__) . 'css/ca-cloner-main.css');
 }
 
-
-// UnderStrap's includes directory.
+//includes directory.
 $ca_cloner_inc_dir = 'inc';
 
-// Array of files to include.
+//array of files to include.
 $ca_cloner_includes = array(
     '/data.php',
     '/acf.php',
@@ -44,21 +40,19 @@ foreach ( $ca_cloner_includes as $file ) {
 }
 
 
-
-
 //GET URL OF CLONE SITE
 function acf_fetch_site_url(){
   global $post;
   $html = '';
   $site_url = get_field('site_url');
     if( $site_url) {      
-      $html = $site_url;  
-     return $html;    
+        $html = $site_url;  
+        return $html;    
     }
 
 }
 
-//BUTTON BUILDER
+//BUTTON BUILDER and DIALOG
 function build_site_clone_button($content){
     global $post;
     $source_id = get_field('site_id', $post->ID);
